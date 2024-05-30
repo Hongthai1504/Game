@@ -103,7 +103,7 @@ void Game::update() {
     squareH = 0.0f;
 
     Uint32 currentTime = SDL_GetTicks();
-    if (!growing && enterPressed && ((currentTime - startTime) / 1000.0f >= startDelay)){
+    if (!growing && enterPressed && ((currentTime - enterTime) / 1000.0f >= startDelay)){
         growing = true;
         startTime = currentTime;
     }
